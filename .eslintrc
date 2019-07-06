@@ -11,5 +11,13 @@
         "browser": true,
         "node": true
     },
-    "extends": ["airbnb-base", "eslint:recommended", "plugin:react/recommended"]
+    "extends": ["airbnb-base", "eslint:recommended", "plugin:react/recommended"],
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "paths": ["src"],
+                "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        }
+    }
 }
