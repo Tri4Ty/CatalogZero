@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 
+import Button from '../../src/theme';
+
 ReactDOM.render(
-    <h1>Hello World</h1>,
+    <Button>Styled Button</Button>,
     document.getElementById("app")
 );
