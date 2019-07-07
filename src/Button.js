@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import theme from 'theme';
+
+import { ThemeContext } from "./Context";
 
 const style = {
     borderWidth: '2px',
@@ -16,10 +17,14 @@ const createButtonStyleFromTheme = ({button}) => ({
     ...style
 })
 
-const buttonStyle = createButtonStyleFromTheme(theme)
-
 const Button = (props) => (
-    <button style={buttonStyle}>{props.children}</button>
+    <ThemeContext.Consumer>
+        {theme => (
+            <button style={createButtonStyleFromTheme(theme)}>
+                {props.children}
+            </button>
+        )}
+    </ThemeContext.Consumer>
 )
 
 export default Button;
