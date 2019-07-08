@@ -11,15 +11,7 @@ const myCustomTheme = {
     }
 };
 
-const myCustomThemeOnlyPrimary = {
-    colors: {
-        lightest: "purple",
-        secondary: "white"
-    }
-};
-  
 const MyCustomThemedButton = withCustomTheme(Button, myCustomTheme);
-const MyCustomThemedButtonMissingProperties = withCustomTheme(Button, myCustomThemeOnlyPrimary);
 const onClick = () => alert("You Clicked Me!!");
 
 /*
@@ -34,9 +26,6 @@ const App = () => (
         <MyCustomThemedButton onClick={onClick}>
             Custom Themed With All Color Props Defined (Text, Background & Border)
         </MyCustomThemedButton>
-        <MyCustomThemedButtonMissingProperties onClick={onClick}>
-            Themed With Only Text & Background Color Defined
-        </MyCustomThemedButtonMissingProperties>
     </div>
 )
 
