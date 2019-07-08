@@ -1,8 +1,8 @@
 const theme = {
-    button: {
-        backgroundColor: 'white',
-        borderColor: 'red',
-        color: 'blue'
+    colors: {
+        primary: "blue",
+        secondary: "red",
+        lightest: "white"
     }
 };
 

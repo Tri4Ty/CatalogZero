@@ -3,10 +3,10 @@ import Button from '../../src/Button';
 import ThemeProvider from '../../src/ThemeProvider';
 
 const myCustomTheme = {
-    button: {
-        backgroundColor: "hotpink",
-        borderColor: "yellow",
-        color: "aqua"
+    colors: {
+        primary: "black",
+        secondary: "grey",
+        lightest: "white"
     }
 };
 

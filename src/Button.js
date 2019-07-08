@@ -10,10 +10,10 @@ const style = {
     fontSize: '24px'
 }
 
-const createButtonStyleFromTheme = ({button}) => ({
-    borderColor: button.borderColor,
-    backgroundColor: button.backgroundColor,
-    color: button.color,
+const createButtonStyleFromTheme = ({colors}) => ({
+    borderColor: colors.secondary,
+    backgroundColor: colors.lightest,
+    color: colors.primary,
     ...style
 })
 

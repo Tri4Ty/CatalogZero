@@ -1,8 +1,8 @@
 const newTheme = {
     button: {
-        backgroundColor: 'hotpink',
-        borderColor: 'yellow',
-        color: 'aqua'
+        primary: 'hotpink',
+        secondary: 'yellow',
+        lightest: 'aqua'
     }
 };
 
