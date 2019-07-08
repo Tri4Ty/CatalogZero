@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from "react-dom";
 
+import { ThemeProvider } from "styled-components";
 import theme from 'theme';
 
-import ThemeProvider from '../../src/ThemeProvider';
 import App from './App'
+import Button from '../../src/Button';
  
 ReactDOM.render(
-    <ThemeProvider theme={theme}>
-        <App />
-    </ThemeProvider>,
+    <div>
+        <Button>Default Themed Button</Button>
+        <ThemeProvider theme={theme}>
+            <App />
+        </ThemeProvider>
+    </div>,
     document.getElementById("app")
 );

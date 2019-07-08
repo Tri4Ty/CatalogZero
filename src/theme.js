@@ -2,7 +2,7 @@ const theme = {
     colors: {
         primary: "blue",
         secondary: "red",
-        lightest: "white"
+        lightest: "lightGrey"
     }
 };
 

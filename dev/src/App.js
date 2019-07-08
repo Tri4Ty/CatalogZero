@@ -1,32 +1,40 @@
 import React from "react";
+
 import Button from '../../src/Button';
-import ThemeProvider from '../../src/ThemeProvider';
+import withCustomTheme from '../../src/CustomThemeProvider';
 
 const myCustomTheme = {
     colors: {
-        primary: "black",
-        secondary: "grey",
-        lightest: "white"
+        primary: "green",
+        secondary: "pink",
+        lightest: "yellow"
     }
 };
 
-function withCustomTheme(CustomComponent, theme) {
-    return function ThemedComponent(props) {
-        return (
-            <ThemeProvider theme={theme}>
-                <CustomComponent {...props} />
-            </ThemeProvider>
-        );
+const myCustomThemeOnlyPrimary = {
+    colors: {
+        primary: "purple",
+        lightest: "white"
     }
-}
+};
   
-const MyNewThemedButton = withCustomTheme(Button, myCustomTheme);
+const MyCustomThemedButton = withCustomTheme(Button, myCustomTheme);
+const MyCustomThemedButtonMissingProperties = withCustomTheme(Button, myCustomThemeOnlyPrimary);
+const onClick = () => alert("You Clicked Me!!");
 
-// Simple application that only displays a button
+/*
+ * Simple application that displays a default themed button 
+ * (passed viw the parent index.js ThemeProvider) and a second 
+ * themed button whose theme is customized to overwrite the 
+ * default theme
+ */
 const App = () => (
     <div>
-        <Button>Themed Button</Button>
-        <MyNewThemedButton>Custom Themed Button</MyNewThemedButton>
+        <Button onClick={onClick}>Themed Button</Button>
+        <MyCustomThemedButton onClick={onClick}>Custom Themed Button</MyCustomThemedButton>
+        <MyCustomThemedButtonMissingProperties onClick={onClick}>
+            Themed With Border & Background Color Defined
+        </MyCustomThemedButtonMissingProperties>
     </div>
 )
 
