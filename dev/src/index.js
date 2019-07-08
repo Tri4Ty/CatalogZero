@@ -18,7 +18,7 @@ const MyCustomThemedButtonMissingProperties = withCustomTheme(Button, myCustomTh
 
 ReactDOM.render(
     <div>
-        <Button>Default Themed Button</Button>
+        <Button>Default Button (No Theme)</Button>
         <ThemeProvider theme={theme}>
             <App />
         </ThemeProvider>
