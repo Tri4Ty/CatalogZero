@@ -22,7 +22,7 @@ const onClick = () => alert("You Clicked Me!!");
  */
 const App = () => (
     <div>
-        <Button onClick={onClick}>Themed Button</Button>
+        <Button onClick={onClick}>Fully Themed Button</Button>
         <MyCustomThemedButton onClick={onClick}>
             Custom Themed With All Color Props Defined (Text, Background & Border)
         </MyCustomThemedButton>
