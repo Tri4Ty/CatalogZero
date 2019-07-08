@@ -30,5 +30,5 @@ const Button = (props) => (
 export default Button;
 
 Button.propTypes = {
-    children: PropTypes.object
+    children: PropTypes.node
 };

@@ -4,7 +4,7 @@ const CircularDependencyPlugin = require('circular-dependency-plugin');
 module.exports = {
     resolve: {
         alias: {
-            theme: path.resolve(__dirname, './src/newTheme.js')
+            theme: path.resolve(__dirname, './src/theme.js')
         },
         extensions: ['*', '.js', '.jsx']
     },
