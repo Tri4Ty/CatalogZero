@@ -4,10 +4,13 @@ import Button from '../../src/Button';
 import withCustomTheme from '../../src/CustomThemeProvider';
 
 const myCustomTheme = {
-    colors: {
-        primary: "green",
-        secondary: "pink",
-        lightest: "yellow"
+    button: {
+        backgroundColor: "green",
+        color: "yellow",
+        hover: {
+            color: "green",
+            backgroundColor: "yellow"
+        }
     }
 };
 
@@ -22,9 +25,9 @@ const onClick = () => alert("You Clicked Me!!");
  */
 const App = () => (
     <div>
-        <Button onClick={onClick}>Fully Themed Button</Button>
+        <Button onClick={onClick}>Provider Themed Button</Button>
         <MyCustomThemedButton onClick={onClick}>
-            Custom Themed With All Color Props Defined (Text, Background & Border)
+            Custom Themed Overwriting Provider Theme (only background & color defined)
         </MyCustomThemedButton>
     </div>
 )
