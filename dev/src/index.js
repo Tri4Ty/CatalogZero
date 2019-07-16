@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from "react-dom";
 
 import { ThemeProvider } from "styled-components";
-import theme from 'theme';
+import theme from '../theme';
 
 import App from './App'
 import Button from '../../src/Button';
 import withCustomTheme from '../../src/CustomThemeProvider';
 
 const myCustomThemeMissingProps = {
-    colors: {
-        lightest: "purple",
-        secondary: "white"
+    button: {
+        backgroundColor: "orange",
+        color: "black",
     }
 };
 const MyCustomThemedButtonMissingProperties = withCustomTheme(Button, myCustomThemeMissingProps);
@@ -23,7 +23,7 @@ ReactDOM.render(
             <App />
         </ThemeProvider>
         <MyCustomThemedButtonMissingProperties>
-            Themed With Only Text & Background Color Defined
+            Custom Theme (only color & background defined ... default hover)
         </MyCustomThemedButtonMissingProperties>
    </div>,
     document.getElementById("app")

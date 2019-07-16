@@ -1,9 +1,10 @@
 {
-  "name": "catalogzero",
+  "name": "catalog-zero",
   "version": "1.0.0",
   "description": "Component library that supports customizable theming and styling",
   "main": "/dist/catalog-one.bundle.js",
   "scripts": {
+    "pre-commit": "lint-staged",
     "start": "webpack-dev-server --config ./webpack.dev.config.js --mode development",
     "build": "webpack --config ./webpack.prod.config.js --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -32,6 +33,15 @@
       "@babel/plugin-proposal-class-properties"
     ]
   },
+  "pre-commit": [
+    "pre-commit"
+  ],
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
@@ -40,6 +50,7 @@
     "babel-eslint": "^10.0.2",
     "babel-loader": "^8.0.6",
     "circular-dependency-plugin": "^5.0.2",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.0.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -48,7 +59,10 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.14.2",
     "html-webpack-plugin": "^3.2.0",
+    "lint-staged": "^9.2.0",
     "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "pre-commit": "^1.2.2",
     "prettier": "^1.18.2",
     "react-hot-loader": "^4.11.1",
     "sass-loader": "^7.1.0",
@@ -60,6 +74,7 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
+    "lodash": ">=4.17.13",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
