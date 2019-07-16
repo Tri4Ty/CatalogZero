@@ -3,17 +3,7 @@ import { createGlobalStyle } from "styled-components";
 
 import Button from "../../src/Button";
 import withCustomTheme from "../../src/CustomThemeProvider";
-
-const myCustomTheme = {
-  button: {
-    backgroundColor: "green",
-    color: "yellow",
-    hover: {
-      color: "green",
-      backgroundColor: "yellow"
-    }
-  }
-};
+import customTheme from '../newTheme';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -22,7 +12,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const MyCustomThemedButton = withCustomTheme(Button, myCustomTheme);
+const MyCustomThemedButton = withCustomTheme(Button, customTheme);
 const onClick = () => alert("You Clicked Me!!");
 
 /*
@@ -46,8 +36,7 @@ const App = () => (
     </div>
     <div>
       <label>
-        Custom Themed Overwriting Provider Theme (only background & color
-        defined):
+        Custom Themed Overwriting Provider Theme (background & color plus hover):
       </label>
       <MyCustomThemedButton onClick={onClick}>Click Me</MyCustomThemedButton>
     </div>

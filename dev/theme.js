@@ -1,8 +1,8 @@
 const colorPallet = {
-  primary: "blue",
-  secondary: "red",
-  lightest: "lightGrey",
-  darkest: "darkGrey"
+  primary: "#333147",
+  secondary: "#e4e3e8",
+  lightest: "white",
+  darkest: "black"
 };
 
 const typography = {
@@ -20,17 +20,18 @@ const theme = {
   button: {
     backgroundColor: colorPallet.primary,
     borderColor: "#000",
-    borderRadius: "15px",
-    borderWidth: "2px",
+    borderRadius: "5px",
+    borderWidth: "1px",
     borderStyle: "solid",
     color: colorPallet.secondary,
     display: "inline",
     fontFamily: typography.fontFamily,
     fontSize: typography.sizes.medium,
-    fontWeight: "bold",
+    fontWeight: "normal",
     margin: "10px",
     outline: "none",
     padding: "5px 10px",
+
     hover: {
       color: colorPallet.primary,
       backgroundColor: colorPallet.secondary

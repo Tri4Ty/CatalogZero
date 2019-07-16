@@ -1,8 +1,11 @@
 const newTheme = {
     button: {
-        primary: 'hotpink',
-        secondary: 'yellow',
-        lightest: 'aqua'
+        backgroundColor: "green",
+        color: "yellow",
+        hover: {
+          color: "green",
+          backgroundColor: "yellow"
+        }
     }
 };
 
