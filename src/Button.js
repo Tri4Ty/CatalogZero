@@ -11,6 +11,7 @@ const theme = {
     borderStyle: "solid",
     color: "#e4e3e8",
     display: "inline",
+    fontFamily: "Verdana",
     fontSize: "14px",
     fontWeight: "normal",
     margin: "10px",
@@ -78,6 +79,13 @@ const ThemedButton = styled.button`
       return props.theme.button.padding;
     } else {
       return theme.button.padding;
+    }
+  }};
+  font-family: ${props => {
+    if (props.theme && props.theme.button && props.theme.button.fontFamily) {
+      return props.theme.button.fontFamily;
+    } else {
+      return theme.button.fontFamily;
     }
   }};
   font-size: ${props => {
