@@ -8,23 +8,11 @@ module.exports = merge(core, {
   mode: "development",
   devtool: "eval-source-map",
   entry: {
-    "catalog-zero": "./dev/src/index.js"
+    "catalog-zero": [path.join(__dirname, "./dev/src/index.js")]
   },
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
-  },
-  module: {
-    rules: [
-      {
-        test: /\.(css|sass|scss)$/,
-        use: [
-          "style-loader", // 3. inject styles into DOM
-          "css-loader", // 2. turn css into commonjs
-          "sass-loader" // 1. turn sass into css
-        ]
-      }
-    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -48,6 +36,6 @@ module.exports = merge(core, {
     // enable hot module replacement
     hot: true,
     // launce a browser by default on start up
-    open: "chrome"
+    open: "Google Chrome"
   }
 });
