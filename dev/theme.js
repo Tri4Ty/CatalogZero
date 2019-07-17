@@ -1,6 +1,7 @@
 const colorPallet = {
   primary: "#333147",
   secondary: "#e4e3e8",
+  tertiary: "darkGrey",
   lightest: "white",
   darkest: "black"
 };
@@ -28,13 +29,23 @@ const theme = {
     fontFamily: typography.fontFamily,
     fontSize: typography.sizes.medium,
     fontWeight: "normal",
-    margin: "10px",
+    margin: "5px",
     outline: "none",
     padding: "5px 10px",
 
     hover: {
       color: colorPallet.primary,
-      backgroundColor: colorPallet.secondary
+      backgroundColor: colorPallet.secondary,
+      cursor: "pointer"
+    },
+
+    focus: {
+      outline: "none"
+    },
+
+    active: {
+      color: colorPallet.darkest,
+      backgroundColor: colorPallet.tertiary
     }
   },
   typography: typography,

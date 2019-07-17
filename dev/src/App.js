@@ -3,11 +3,11 @@ import { createGlobalStyle } from "styled-components";
 
 import Button from "../../src/Button";
 import withCustomTheme from "../../src/CustomThemeProvider";
-import customTheme from '../newTheme';
+import customTheme from "../newTheme";
 
 const GlobalStyle = createGlobalStyle`
   body {
-    color: ${props => props.theme.colorPallet.darkest};
+    color: ${props => props.theme.colorPallet.primary};
     font-family: ${props => props.theme.typography.fontFamily};
   }
 `;
@@ -25,18 +25,18 @@ const App = () => (
   <div>
     <GlobalStyle />
     <div>
-      <label>Provider Themed Button:</label>
+      <label>Application Themed Button:</label>
       <Button onClick={onClick}>Click Me</Button>
     </div>
     <div>
-      <label>XL Sized Provider Themed Button:</label>
+      <label>Application Themed Button With Size Property (XL):</label>
       <Button size="xLarge" onClick={onClick}>
         Click Me
       </Button>
     </div>
     <div>
       <label>
-        Custom Themed Overwriting Provider Theme (background & color plus hover):
+        Overwriting Application Theme (background & color plus hover):{" "}
       </label>
       <MyCustomThemedButton onClick={onClick}>Click Me</MyCustomThemedButton>
     </div>
