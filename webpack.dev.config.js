@@ -8,7 +8,7 @@ module.exports = merge(core, {
   mode: "development",
   devtool: "eval-source-map",
   entry: {
-    "catalog-zero": [path.join(__dirname, "./dev/src/index.js")]
+    "catalog-zero": "./dev/src/index.js"
   },
   output: {
     filename: "[name].bundle.js",
@@ -36,6 +36,6 @@ module.exports = merge(core, {
     // enable hot module replacement
     hot: true,
     // launce a browser by default on start up
-    open: "chrome"
+    open: "Google Chrome"
   }
 });

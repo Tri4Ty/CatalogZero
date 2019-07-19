@@ -1,6 +1,6 @@
 {
   "name": "catalog-zero",
-  "version": "1.0.1-betaTesting",
+  "version": "1.0.2",
   "description": "Component library that supports customizable theming and styling",
   "main": "/dist/catalog-one.bundle.js",
   "scripts": {
@@ -30,10 +30,13 @@
     ],
     "plugins": [
       "@babel/plugin-proposal-class-properties",
-      ["babel-plugin-styled-components", {
-        "minify": false,
-        "transpileTemplateLiterals": false
-      }]
+      [
+        "babel-plugin-styled-components",
+        {
+          "minify": false,
+          "transpileTemplateLiterals": false
+        }
+      ]
     ]
   },
   "pre-commit": [
@@ -55,6 +58,7 @@
     "babel-plugin-styled-components": "^1.10.6",
     "circular-dependency-plugin": "^5.0.2",
     "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.1.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-loader": "^2.1.2",
@@ -63,25 +67,30 @@
     "eslint-plugin-react": "^7.14.2",
     "html-webpack-plugin": "^3.2.0",
     "lint-staged": "^9.2.0",
+    "node-sass": "^4.12.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "pre-commit": "^1.2.2",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-hot-loader": "^4.11.1",
+    "sass-loader": "^7.1.0",
     "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "styled-components": "^4.3.2",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "lodash": ">=4.17.13",
-    "styled-components": "^4.3.2"
+    "lodash": ">=4.17.13"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.3.2"
   }
 }
