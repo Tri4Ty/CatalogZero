@@ -1,6 +1,6 @@
 {
   "name": "catalog-zero",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Component library that supports customizable theming and styling",
   "main": "/dist/catalog-one.bundle.js",
   "scripts": {
@@ -78,19 +78,18 @@
     "sass-loader": "^7.1.0",
     "source-map-loader": "^0.2.4",
     "style-loader": "^0.23.1",
-    "styled-components": "^4.3.2",
     "webpack": "^4.35.0",
     "webpack-cli": "^3.3.5",
     "webpack-dev-server": "^3.7.2",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "lodash": ">=4.17.13"
+    "lodash": ">=4.17.13",
+    "styled-components": "^4.3.2"
   },
   "peerDependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^4.3.2"
+    "react-dom": "^16.8.6"
   }
 }
