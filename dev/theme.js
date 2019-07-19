@@ -19,12 +19,12 @@ const typography = {
 
 const theme = {
   button: {
-    backgroundColor: colorPallet.primary,
+    backgroundColor: colorPallet.darkest,
     borderColor: "#000",
     borderRadius: "5px",
     borderWidth: "1px",
     borderStyle: "solid",
-    color: colorPallet.secondary,
+    color: colorPallet.lightest,
     display: "inline",
     fontFamily: typography.fontFamily,
     fontSize: typography.sizes.medium,
@@ -34,8 +34,8 @@ const theme = {
     padding: "5px 10px",
 
     hover: {
-      color: colorPallet.primary,
-      backgroundColor: colorPallet.secondary,
+      color: colorPallet.darkest,
+      backgroundColor: colorPallet.lightest,
       cursor: "pointer"
     },
 

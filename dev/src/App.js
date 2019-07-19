@@ -29,6 +29,12 @@ const App = () => (
       <Button onClick={onClick}>Click Me</Button>
     </div>
     <div>
+      <label>Application Themed Button:</label>
+      <Button primary onClick={onClick}>
+        Click Me
+      </Button>
+    </div>
+    <div>
       <label>Application Themed Button With Size Property (XL):</label>
       <Button size="xLarge" onClick={onClick}>
         Click Me

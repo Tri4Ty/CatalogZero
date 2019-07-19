@@ -5,7 +5,9 @@ import styled from "styled-components";
 const ThemedButton = styled.button`
   background-color: ${props => {
     if (props.primary) {
-      return props.theme.colors.primary;
+      return props.theme.colorPallet.primary;
+    } else if (props.secondary) {
+      return props.theme.colorPallet.secondary;
     } else if (
       props.theme &&
       props.theme.button &&
@@ -35,7 +37,11 @@ const ThemedButton = styled.button`
     }
   }};
   color: ${props => {
-    if (props.theme && props.theme.button && props.theme.button.color) {
+    if (props.primary) {
+      return props.theme.colorPallet.secondary;
+    } else if (props.secondary) {
+      return props.theme.colorPallet.primary;
+    } else if (props.theme && props.theme.button && props.theme.button.color) {
       return props.theme.button.color;
     }
   }};
@@ -50,7 +56,7 @@ const ThemedButton = styled.button`
     }
   }};
   font-size: ${props => {
-    if (props.size) {
+    if (props.size && props.theme && props.theme.typography) {
       return props["theme"]["typography"]["sizes"][props.size];
     } else if (
       props.theme &&
@@ -78,7 +84,11 @@ const ThemedButton = styled.button`
 
   :hover {
     color: ${props => {
-      if (
+      if (props.primary) {
+        return props.theme.colorPallet.primary;
+      } else if (props.secondary) {
+        return props.theme.colorPallet.secondary;
+      } else if (
         props.theme &&
         props.theme.button &&
         props.theme.button.hover &&
@@ -88,7 +98,11 @@ const ThemedButton = styled.button`
       }
     }};
     background-color: ${props => {
-      if (
+      if (props.primary) {
+        return props.theme.colorPallet.secondary;
+      } else if (props.secondary) {
+        return props.theme.colorPallet.primary;
+      } else if (
         props.theme &&
         props.theme.button &&
         props.theme.button.hover &&
@@ -147,7 +161,12 @@ const ThemedButton = styled.button`
 `;
 
 const Button = props => (
-  <ThemedButton size={props.size} onClick={props.onClick}>
+  <ThemedButton
+    size={props.size}
+    primary={props.primary}
+    secondary={props.secondary}
+    onClick={props.onClick}
+  >
     {props.children}
   </ThemedButton>
 );
@@ -156,5 +175,7 @@ export default Button;
 Button.propTypes = {
   onClick: PropTypes.func,
   children: PropTypes.node,
-  size: PropTypes.string
+  size: PropTypes.string,
+  primary: PropTypes.bool,
+  secondary: PropTypes.bool
 };
